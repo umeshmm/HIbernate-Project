@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="beans.Movies" table="movies" schema="system">
+ 		<id name="mid"/>       
+        <property name="moviename"/>
+        <many-to-one name="actor" class="beans.Actor">
+ 			<column name="aid"/>           
+        </many-to-one> 
+    </class> 
+    
+    
+</hibernate-mapping>
